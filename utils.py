@@ -32,11 +32,11 @@ def get_film_by_title(film_title):
                    """
     info = execute_query(sqlite_query)
     search_result = {
-	    "title": info[0],
-	    "country": info[1],
-	    "release_year": info[2],
-	    "genre": info[3],
-	    "description": info[4]
+	    "title": info[0][0],
+	    "country": info[0][1],
+	    "release_year": info[0][2],
+	    "genre": info[0][3],
+	    "description": info[0][4]
         }
     return search_result
 
@@ -124,9 +124,9 @@ def get_film_by_parameters(movie_type, release_year, genre):
 
 
 
-#pp(get_film_by_title('100'))
+pp(get_film_by_title('100'))
 #pp(get_films_from_year_to_year(2000, 2010))
 #pp(get_films_by_rating('children'))
 #pp(get_films_by_genre('Dramas'))
 #pp(get_partners('Rose McIver', 'Ben Lamb'))
-pp(get_film_by_parameters('Movie', 2000, 'Dramas'))
+#pp(get_film_by_parameters('Movie', 2000, 'Dramas'))
