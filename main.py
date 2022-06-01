@@ -13,7 +13,7 @@ def main():
 
 @app.route('/movie/<title>/')
 def get_film_by_title(title):
-    return get_film_by_title(title)
+    return utils.get_film_by_title(title)
 
 
 @app.route('/movie/<int:first_year>/to/<int:second_year>')
